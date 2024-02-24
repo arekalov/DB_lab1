@@ -1,3 +1,4 @@
+BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS nationality
 (
     name        TEXT PRIMARY KEY,
@@ -194,3 +195,5 @@ INSERT INTO project_problems (projectID, problemID)
 VALUES ('main pro', 2) ON CONFLICT DO NOTHING;
 INSERT INTO project_problems (projectID, problemID)
 VALUES ('project', 3) ON CONFLICT DO NOTHING;
+
+COMMIT;
